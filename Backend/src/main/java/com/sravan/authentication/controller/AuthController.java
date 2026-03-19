@@ -17,7 +17,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import com.sravan.authentication.entity.UserEntity;
-import com.sravan.authentication.exception.BusinessException;
 import com.sravan.authentication.io.AuthRequest;
 import com.sravan.authentication.io.AuthResponse;
 import com.sravan.authentication.io.ResetPasswordRequest;
@@ -90,20 +89,6 @@ public class AuthController {
     @PostMapping("/reset-password")
     public void resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
         profileService.resetPassword(request.getEmail(), request.getOtp(), request.getNewPassword());
-    }
-
-    @PostMapping("/send-otp")
-    public void sendVerifyOtp(@CurrentSecurityContext(expression = "authentication?.name") String email) {
-        profileService.sendOtp(email);
-    }
-
-    @PostMapping("/verify-otp")
-    public void verifyEmail(@Valid @RequestBody Map<String, Object> request,
-                            @CurrentSecurityContext(expression = "authentication?.name") String email) {
-        if (request.get("otp").toString() == null) {
-            throw new BusinessException("Missing Details",HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-        profileService.verifyOtp(email, request.get("otp").toString());
     }
 
     @PostMapping("/logout")

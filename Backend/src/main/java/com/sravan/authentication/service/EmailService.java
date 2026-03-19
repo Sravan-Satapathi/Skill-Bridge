@@ -21,23 +21,6 @@ public class EmailService {
     @Value("${spring.mail.properties.mail.smtp.from}")
     private String fromEmail;
 
-    public void sendOtpEmail(String toEmail,String otp) throws MessagingException {
-        Context context=new Context();
-        context.setVariable("email",toEmail);
-        context.setVariable("otp",otp);
-
-        String process=templateEngine.process("verify-email",context);
-        MimeMessage mimeMessage=mailSender.createMimeMessage();
-        MimeMessageHelper helper=new MimeMessageHelper(mimeMessage);
-
-        helper.setFrom(fromEmail);
-        helper.setTo(toEmail);
-        helper.setSubject("Account Verification OTP");
-        helper.setText(process,true);
-
-        mailSender.send(mimeMessage);
-    }
-
     public void sendResetOtpEmail(String toEmail,String otp) throws MessagingException {
         Context context=new Context();
         context.setVariable("email",toEmail);

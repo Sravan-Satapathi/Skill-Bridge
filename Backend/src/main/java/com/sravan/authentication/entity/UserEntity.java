@@ -27,10 +27,6 @@ public class UserEntity {
     @Column(unique = true)
     private String email;
     private String password;
-    private String verifyOtp;
-    @Builder.Default
-    private Boolean isAccountVerified=false;
-    private Long verifyOtpExpireAt;
     private String resetOtp;
     private Long resetOtpExpireAt;
 
