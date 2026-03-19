@@ -5,14 +5,14 @@
       "title": "Backend Engineer",
       "description": "Builds server-side logic, APIs, and data pipelines",
       "skillCategories": {
-        "languages": ["Java", "Python", "JavaScript", "Go", "C++", "C", "C#"],
-        "frameworks": ["Spring Boot", "Django", "Express", "Gin", "Hibernate", "Flask", "FastAPI", ".NET", "ASP.NET Core"],
-        "databases": ["SQL", "MongoDB", "PostgreSQL", "Redis", "MySQL"],
-        "versionControl": ["Git", "GitHub", "GitHub Actions"],
-        "apiConcepts": ["REST APIs", "RESTful APIs"],
-        "systemDesign": ["Microservices", "Distributed Systems", "Event-Driven Architecture"],
-        "cloud": ["Docker", "AWS", "EC2", "RDS", "Kubernetes"],
-        "tools": ["Postman", "Linux"]
+        "languages": ["Java", "Python", "JavaScript", "Go", "C++", "C", "C#", "Ruby", "Kotlin", "Scala", "Rust", "TypeScript"],
+        "frameworks": ["Spring Boot", "Django", "Express", "Gin", "Hibernate", "Flask", "FastAPI", ".NET", "ASP.NET Core", "NestJS", "Ruby on Rails", "Laravel", "Phoenix"],
+        "databases": ["SQL", "MongoDB", "PostgreSQL", "Redis", "MySQL", "SQLite", "DynamoDB", "Elasticsearch", "Cassandra"],
+        "versionControl": ["Git", "GitHub", "GitHub Actions", "GitLab", "Bitbucket", "SVN"],
+        "apiConcepts": ["REST APIs", "RESTful APIs", "GraphQL", "WebSockets", "gRPC", "OpenAPI", "Swagger"],
+        "systemDesign": ["Microservices", "Distributed Systems", "Event-Driven Architecture", "CQRS", "Message Queues", "Kafka", "RabbitMQ"],
+        "cloud": ["Docker", "AWS", "EC2", "RDS", "Kubernetes", "GCP", "Azure", "Lambda", "S3", "ECS", "Helm"],
+        "tools": ["Postman", "Linux", "Swagger", "JMeter", "Insomnia"]
       },
       "experienceLevels": {
         "ENTRY": {
@@ -54,11 +54,11 @@
       "title": "Cloud Engineer",
       "description": "Designs and manages cloud infrastructure",
       "skillCategories": {
-        "cloudPlatforms": ["AWS", "GCP", "Azure", "EC2", "RDS", "S3", "Lambda"],
-        "iac": ["Terraform", "CloudFormation", "Pulumi"],
-        "containers": ["Docker", "Kubernetes"],
-        "scripting": ["Python", "Bash", "Go"],
-        "coreConcepts": ["Linux", "Networking", "CI/CD"]
+        "cloudPlatforms": ["AWS", "GCP", "Azure", "EC2", "RDS", "S3", "Lambda", "CloudFront", "CloudWatch", "VPC", "IAM", "EKS", "GKE", "AKS"],
+        "iac": ["Terraform", "CloudFormation", "Pulumi", "Ansible", "Packer"],
+        "containers": ["Docker", "Kubernetes", "Helm", "ECS", "EKS", "GKE"],
+        "scripting": ["Python", "Bash", "Go", "PowerShell", "YAML"],
+        "coreConcepts": ["Linux", "Networking", "CI/CD", "Load Balancing", "Security", "High Availability", "Disaster Recovery"]
       },
       "experienceLevels": {
         "ENTRY": {
@@ -94,11 +94,11 @@
       "title": "Frontend Engineer",
       "description": "Builds user interfaces and client-side applications",
       "skillCategories": {
-        "languages": ["JavaScript", "TypeScript"],
-        "frameworks": ["React", "Vue", "Angular", "Next.js"],
-        "styling": ["HTML", "CSS", "Tailwind", "Sass"],
-        "versionControl": ["Git", "GitHub"],
-        "uiConcepts": ["Responsive Design", "Accessibility"]
+        "languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
+        "frameworks": ["React", "Vue", "Angular", "Next.js", "Svelte", "Remix", "Nuxt", "Astro", "Gatsby"],
+        "styling": ["HTML", "CSS", "Tailwind", "Sass", "Styled Components", "CSS Modules", "Bootstrap", "Material UI", "Chakra UI"],
+        "versionControl": ["Git", "GitHub", "GitLab", "Bitbucket", "GitHub Actions"],
+        "uiConcepts": ["Responsive Design", "Accessibility", "Performance", "Cross-browser", "State Management", "Web Vitals", "Progressive Web Apps"]
       },
       "experienceLevels": {
         "ENTRY": {
@@ -135,12 +135,12 @@
       "title": "Full-Stack Engineer",
       "description": "Works across frontend and backend development",
       "skillCategories": {
-        "languages": ["Java", "Python", "JavaScript", "TypeScript"],
-        "frameworks": ["Spring Boot", "React", "Node.js", "Express"],
-        "databases": ["SQL", "MongoDB", "PostgreSQL"],
-        "versionControl": ["Git", "GitHub", "GitHub Actions"],
-        "apiConcepts": ["REST APIs", "RESTful APIs"],
-        "containers": ["Docker", "Docker Compose"]
+        "languages": ["Java", "Python", "JavaScript", "TypeScript", "Go", "Ruby"],
+        "frameworks": ["Spring Boot", "React", "Node.js", "Express", "Django", "Vue", "FastAPI", "Next.js", "NestJS"],
+        "databases": ["SQL", "MongoDB", "PostgreSQL", "Redis", "MySQL"],
+        "versionControl": ["Git", "GitHub", "GitHub Actions", "GitLab"],
+        "apiConcepts": ["REST APIs", "RESTful APIs", "GraphQL", "WebSockets"],
+        "containers": ["Docker", "Docker Compose", "Kubernetes"]
       },
       "experienceLevels": {
         "ENTRY": {
@@ -183,34 +183,46 @@
         "frameworks": ["Spark", "Scikit-Learn", "Tensorflow", "PyTorch", "Pandas", "NumPy", "Keras"],
         "databases": ["SQL", "PostgreSQL", "MongoDB"],
         "mlConcepts": ["Machine Learning", "Deep Learning", "Neural Networks"],
-        "dataStructuresAlgorithms": ["Data Structures", "Algorithms"]
+        "dataStructuresAlgorithms": ["Data Structures", "Algorithms"],
+        "etlTools": ["Airflow", "dbt", "Fivetran", "Prefect", "Luigi", "Apache Beam", "Kafka"],
+        "dataWarehousing": ["Snowflake", "BigQuery", "Redshift", "Databricks", "Delta Lake", "Data Lake"],
+        "pipelineConcepts": ["ETL", "ELT", "Batch Processing", "Streaming", "Data Pipeline", "Data Modeling"]
       },
       "experienceLevels": {
         "ENTRY": {
           "categoryWeights": {
-            "languages": 0.40,
-            "frameworks": 0.30,
-            "databases": 0.20,
+            "languages": 0.35,
+            "frameworks": 0.25,
+            "databases": 0.18,
             "mlConcepts": 0.05,
-            "dataStructuresAlgorithms": 0.05
+            "dataStructuresAlgorithms": 0.05,
+            "etlTools": 0.06,
+            "dataWarehousing": 0.04,
+            "pipelineConcepts": 0.02
           }
         },
         "MID": {
           "categoryWeights": {
-            "languages": 0.30,
-            "frameworks": 0.35,
-            "databases": 0.20,
-            "mlConcepts": 0.10,
-            "dataStructuresAlgorithms": 0.05
+            "languages": 0.25,
+            "frameworks": 0.28,
+            "databases": 0.15,
+            "mlConcepts": 0.08,
+            "dataStructuresAlgorithms": 0.04,
+            "etlTools": 0.10,
+            "dataWarehousing": 0.06,
+            "pipelineConcepts": 0.04
           }
         },
         "SENIOR": {
           "categoryWeights": {
-            "languages": 0.25,
-            "frameworks": 0.35,
-            "databases": 0.20,
-            "mlConcepts": 0.15,
-            "dataStructuresAlgorithms": 0.05
+            "languages": 0.20,
+            "frameworks": 0.25,
+            "databases": 0.12,
+            "mlConcepts": 0.10,
+            "dataStructuresAlgorithms": 0.03,
+            "etlTools": 0.12,
+            "dataWarehousing": 0.12,
+            "pipelineConcepts": 0.08
           }
         }
       }
@@ -220,22 +232,24 @@
       "title": "Software Development Engineer",
       "description": "General software development across various domains",
       "skillCategories": {
-        "languages": ["Java", "Python", "JavaScript", "C++", "Go"],
-        "frameworks": ["Spring Boot", "React", "Node.js", "Django"],
-        "databases": ["SQL", "MongoDB"],
-        "versionControl": ["Git", "GitHub"],
-        "apiConcepts": ["REST APIs", "RESTful APIs"],
-        "dataStructuresAlgorithms": ["Data Structures", "Algorithms"]
+        "languages": ["Java", "Python", "JavaScript", "C++", "Go", "TypeScript", "C#", "Kotlin"],
+        "frameworks": ["Spring Boot", "React", "Node.js", "Django", "Express", "Angular", "FastAPI", ".NET"],
+        "databases": ["SQL", "MongoDB", "PostgreSQL", "Redis", "MySQL"],
+        "versionControl": ["Git", "GitHub", "GitLab", "GitHub Actions"],
+        "apiConcepts": ["REST APIs", "RESTful APIs", "GraphQL"],
+        "dataStructuresAlgorithms": ["Data Structures", "Algorithms", "Big O Notation", "Data Structures and Algorithms"],
+        "systemDesign": ["Microservices", "Distributed Systems", "Design Patterns", "System Design"],
+        "cloud": ["Docker", "AWS", "Kubernetes"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.35, "frameworks": 0.25, "databases": 0.25, "versionControl": 0.05, "apiConcepts": 0.05, "dataStructuresAlgorithms": 0.05}
+          "categoryWeights": {"languages": 0.30, "frameworks": 0.25, "databases": 0.25, "versionControl": 0.05, "apiConcepts": 0.05, "dataStructuresAlgorithms": 0.05, "systemDesign": 0.025, "cloud": 0.025}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.28, "frameworks": 0.28, "databases": 0.22, "versionControl": 0.05, "apiConcepts": 0.07, "dataStructuresAlgorithms": 0.10}
+          "categoryWeights": {"languages": 0.25, "frameworks": 0.25, "databases": 0.20, "versionControl": 0.05, "apiConcepts": 0.07, "dataStructuresAlgorithms": 0.08, "systemDesign": 0.05, "cloud": 0.05}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.22, "frameworks": 0.25, "databases": 0.20, "versionControl": 0.05, "apiConcepts": 0.08, "dataStructuresAlgorithms": 0.20}
+          "categoryWeights": {"languages": 0.18, "frameworks": 0.22, "databases": 0.18, "versionControl": 0.05, "apiConcepts": 0.07, "dataStructuresAlgorithms": 0.15, "systemDesign": 0.10, "cloud": 0.05}
         }
       }
     },
@@ -244,20 +258,23 @@
       "title": "Data Analyst",
       "description": "Analyzes data to drive business insights and reporting",
       "skillCategories": {
-        "languages": ["Python", "SQL", "R"],
-        "tools": ["Excel", "Tableau", "Power BI", "Pandas"],
+        "languages": ["Python", "SQL", "R", "VBA"],
+        "tools": ["Excel", "Tableau", "Power BI", "Pandas", "Looker", "Google Analytics", "Jupyter"],
         "databases": ["SQL", "PostgreSQL", "MySQL"],
-        "analyticsDomains": ["Statistics", "Data Visualization", "ETL"]
+        "analyticsDomains": ["Statistics", "Data Visualization", "ETL", "A/B Testing", "Forecasting", "Business Intelligence"],
+        "reporting": ["Report Writing", "Dashboard Design", "Stakeholder Presentations", "Executive Summaries"],
+        "dataQuality": ["Data Cleaning", "Data Validation", "Data Profiling", "Missing Data Handling"],
+        "domainKnowledge": ["Finance", "Marketing", "Operations", "Sales Analytics", "Customer Analytics"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.35, "tools": 0.35, "databases": 0.20, "analyticsDomains": 0.10}
+          "categoryWeights": {"languages": 0.30, "tools": 0.30, "databases": 0.18, "analyticsDomains": 0.10, "reporting": 0.06, "dataQuality": 0.04, "domainKnowledge": 0.02}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.30, "tools": 0.30, "databases": 0.25, "analyticsDomains": 0.15}
+          "categoryWeights": {"languages": 0.25, "tools": 0.25, "databases": 0.20, "analyticsDomains": 0.12, "reporting": 0.08, "dataQuality": 0.06, "domainKnowledge": 0.04}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.25, "tools": 0.28, "databases": 0.25, "analyticsDomains": 0.22}
+          "categoryWeights": {"languages": 0.20, "tools": 0.22, "databases": 0.18, "analyticsDomains": 0.15, "reporting": 0.10, "dataQuality": 0.08, "domainKnowledge": 0.07}
         }
       }
     },
@@ -267,20 +284,22 @@
       "description": "Builds predictive models and ML solutions",
       "skillCategories": {
         "languages": ["Python", "R", "SQL"],
-        "frameworks": ["Scikit-Learn", "Tensorflow", "PyTorch", "Pandas", "NumPy"],
+        "frameworks": ["Scikit-Learn", "Tensorflow", "PyTorch", "Pandas", "NumPy", "XGBoost", "LightGBM", "Statsmodels"],
         "databases": ["SQL", "MongoDB"],
-        "mlConcepts": ["Machine Learning", "Deep Learning"],
-        "statistics": ["Statistics", "Probability"]
+        "mlConcepts": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Time Series"],
+        "statistics": ["Statistics", "Probability", "Hypothesis Testing", "Regression"],
+        "experimentTracking": ["MLflow", "Weights & Biases", "Experiment Design", "A/B Testing", "Model Evaluation"],
+        "deployment": ["Model Serving", "API Deployment", "Containerization", "Cloud ML"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.35, "frameworks": 0.35, "databases": 0.15, "mlConcepts": 0.10, "statistics": 0.05}
+          "categoryWeights": {"languages": 0.30, "frameworks": 0.32, "databases": 0.12, "mlConcepts": 0.12, "statistics": 0.06, "experimentTracking": 0.05, "deployment": 0.03}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.30, "frameworks": 0.35, "databases": 0.15, "mlConcepts": 0.15, "statistics": 0.05}
+          "categoryWeights": {"languages": 0.25, "frameworks": 0.30, "databases": 0.10, "mlConcepts": 0.18, "statistics": 0.05, "experimentTracking": 0.07, "deployment": 0.05}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.25, "frameworks": 0.35, "databases": 0.15, "mlConcepts": 0.20, "statistics": 0.05}
+          "categoryWeights": {"languages": 0.20, "frameworks": 0.28, "databases": 0.08, "mlConcepts": 0.22, "statistics": 0.05, "experimentTracking": 0.09, "deployment": 0.08}
         }
       }
     },
@@ -289,22 +308,24 @@
       "title": "DevOps Engineer",
       "description": "Automates CI/CD and infrastructure",
       "skillCategories": {
-        "tools": ["Docker", "Kubernetes", "Terraform", "Jenkins"],
-        "cloud": ["AWS", "GCP", "Azure"],
+        "tools": ["Docker", "Kubernetes", "Terraform", "Jenkins", "Ansible", "ArgoCD", "Helm", "Prometheus", "Grafana"],
+        "cloud": ["AWS", "GCP", "Azure", "Lambda", "ECS", "CloudWatch"],
         "scripting": ["Python", "Bash", "Go"],
         "versionControl": ["Git", "GitHub", "GitHub Actions"],
         "cicd": ["CI/CD"],
-        "infrastructure": ["Linux", "Networking"]
+        "infrastructure": ["Linux", "Networking"],
+        "observability": ["Monitoring", "Logging", "Alerting", "Tracing", "Metrics"],
+        "automation": ["Infrastructure as Code", "Configuration Management", "Secret Management"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"tools": 0.40, "cloud": 0.25, "scripting": 0.25, "versionControl": 0.05, "cicd": 0.025, "infrastructure": 0.025}
+          "categoryWeights": {"tools": 0.35, "cloud": 0.22, "scripting": 0.22, "versionControl": 0.05, "cicd": 0.05, "infrastructure": 0.05, "observability": 0.04, "automation": 0.02}
         },
         "MID": {
-          "categoryWeights": {"tools": 0.35, "cloud": 0.30, "scripting": 0.20, "versionControl": 0.05, "cicd": 0.05, "infrastructure": 0.05}
+          "categoryWeights": {"tools": 0.30, "cloud": 0.28, "scripting": 0.18, "versionControl": 0.05, "cicd": 0.05, "infrastructure": 0.04, "observability": 0.06, "automation": 0.04}
         },
         "SENIOR": {
-          "categoryWeights": {"tools": 0.30, "cloud": 0.35, "scripting": 0.20, "versionControl": 0.05, "cicd": 0.05, "infrastructure": 0.05}
+          "categoryWeights": {"tools": 0.25, "cloud": 0.30, "scripting": 0.15, "versionControl": 0.05, "cicd": 0.05, "infrastructure": 0.05, "observability": 0.08, "automation": 0.07}
         }
       }
     },
@@ -314,19 +335,21 @@
       "description": "Productionizes ML models and pipelines",
       "skillCategories": {
         "languages": ["Python", "SQL"],
-        "frameworks": ["Tensorflow", "PyTorch", "Scikit-Learn", "Spark"],
+        "frameworks": ["Tensorflow", "PyTorch", "Scikit-Learn", "Spark", "XGBoost", "MLflow", "Kubeflow"],
         "cloud": ["AWS", "GCP"],
-        "mlConcepts": ["Machine Learning", "Deep Learning", "MLOps"]
+        "mlConcepts": ["Machine Learning", "Deep Learning", "MLOps", "Model Serving", "Feature Store"],
+        "infrastructure": ["Docker", "Kubernetes", "SageMaker", "Vertex AI", "Model Registry"],
+        "pipelineTools": ["Airflow", "Kubeflow Pipelines", "TFX", "MLflow Pipelines"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.35, "frameworks": 0.40, "cloud": 0.10, "mlConcepts": 0.15}
+          "categoryWeights": {"languages": 0.30, "frameworks": 0.35, "cloud": 0.10, "mlConcepts": 0.15, "infrastructure": 0.06, "pipelineTools": 0.04}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.30, "frameworks": 0.35, "cloud": 0.20, "mlConcepts": 0.15}
+          "categoryWeights": {"languages": 0.25, "frameworks": 0.30, "cloud": 0.18, "mlConcepts": 0.12, "infrastructure": 0.10, "pipelineTools": 0.05}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.25, "frameworks": 0.30, "cloud": 0.25, "mlConcepts": 0.20}
+          "categoryWeights": {"languages": 0.20, "frameworks": 0.25, "cloud": 0.22, "mlConcepts": 0.12, "infrastructure": 0.13, "pipelineTools": 0.08}
         }
       }
     },
@@ -336,20 +359,22 @@
       "description": "Builds secure systems and performs security assessments",
       "skillCategories": {
         "languages": ["Python", "Go"],
-        "securityDomains": ["Cryptography", "OWASP", "Penetration Testing", "Application Security"],
-        "tools": ["Linux", "Docker", "Kubernetes"],
+        "securityDomains": ["Cryptography", "OWASP", "Penetration Testing", "Application Security", "Zero Trust", "SIEM", "Threat Modeling"],
+        "tools": ["Linux", "Docker", "Kubernetes", "Burp Suite", "Wireshark", "Metasploit"],
         "cloud": ["AWS", "GCP"],
-        "networking": ["Networking", "Network Security"]
+        "networking": ["Networking", "Network Security"],
+        "compliance": ["SOC 2", "GDPR", "HIPAA", "PCI-DSS", "Security Audits"],
+        "incidentResponse": ["Incident Response", "Forensics", "Threat Hunting", "Vulnerability Management"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.30, "securityDomains": 0.40, "tools": 0.20, "cloud": 0.05, "networking": 0.05}
+          "categoryWeights": {"languages": 0.28, "securityDomains": 0.35, "tools": 0.20, "cloud": 0.05, "networking": 0.05, "compliance": 0.04, "incidentResponse": 0.03}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.25, "securityDomains": 0.35, "tools": 0.25, "cloud": 0.10, "networking": 0.05}
+          "categoryWeights": {"languages": 0.22, "securityDomains": 0.30, "tools": 0.22, "cloud": 0.08, "networking": 0.05, "compliance": 0.07, "incidentResponse": 0.06}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.20, "securityDomains": 0.35, "tools": 0.25, "cloud": 0.15, "networking": 0.05}
+          "categoryWeights": {"languages": 0.18, "securityDomains": 0.28, "tools": 0.22, "cloud": 0.12, "networking": 0.05, "compliance": 0.08, "incidentResponse": 0.07}
         }
       }
     },
@@ -358,21 +383,23 @@
       "title": "Mobile Developer",
       "description": "Builds iOS and Android applications",
       "skillCategories": {
-        "languages": ["Swift", "Kotlin", "JavaScript"],
-        "frameworks": ["React Native", "Flutter"],
+        "languages": ["Swift", "Kotlin", "JavaScript", "Dart"],
+        "frameworks": ["React Native", "Flutter", "SwiftUI", "Jetpack Compose"],
         "versionControl": ["Git", "GitHub"],
-        "apiConcepts": ["REST APIs", "RESTful APIs"],
-        "mobileDesign": ["Mobile UI/UX", "Responsive Design"]
+        "apiConcepts": ["REST APIs", "RESTful APIs", "GraphQL"],
+        "mobileDesign": ["Mobile UI/UX", "Responsive Design"],
+        "buildTools": ["Gradle", "Xcode", "Android Studio", "Fastlane", "CocoaPods"],
+        "mobileTesting": ["Unit Testing", "UI Testing", "Device Testing", "Espresso", "XCTest"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.45, "frameworks": 0.35, "versionControl": 0.05, "apiConcepts": 0.10, "mobileDesign": 0.05}
+          "categoryWeights": {"languages": 0.38, "frameworks": 0.32, "versionControl": 0.05, "apiConcepts": 0.10, "mobileDesign": 0.05, "buildTools": 0.06, "mobileTesting": 0.04}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.40, "frameworks": 0.35, "versionControl": 0.05, "apiConcepts": 0.10, "mobileDesign": 0.10}
+          "categoryWeights": {"languages": 0.33, "frameworks": 0.30, "versionControl": 0.05, "apiConcepts": 0.10, "mobileDesign": 0.08, "buildTools": 0.08, "mobileTesting": 0.06}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.35, "frameworks": 0.35, "versionControl": 0.05, "apiConcepts": 0.10, "mobileDesign": 0.15}
+          "categoryWeights": {"languages": 0.28, "frameworks": 0.28, "versionControl": 0.05, "apiConcepts": 0.10, "mobileDesign": 0.12, "buildTools": 0.08, "mobileTesting": 0.09}
         }
       }
     },
@@ -382,21 +409,23 @@
       "description": "Ensures software quality through testing",
       "skillCategories": {
         "languages": ["Java", "Python", "JavaScript"],
-        "tools": ["Selenium", "Jest", "Postman", "Cypress"],
+        "tools": ["Selenium", "Jest", "Postman", "Cypress", "Playwright", "TestNG", "pytest"],
         "versionControl": ["Git", "GitHub"],
         "apiConcepts": ["REST APIs", "RESTful APIs"],
         "methodologies": ["Agile", "Scrum"],
-        "testAutomation": ["Test Automation", "Automated Testing"]
+        "testAutomation": ["Test Automation", "Automated Testing", "API Testing", "Load Testing"],
+        "testTypes": ["Unit Testing", "Integration Testing", "E2E Testing", "Performance Testing", "Security Testing"],
+        "qualityProcesses": ["Test Planning", "Defect Management", "Quality Metrics", "Test Strategy"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"languages": 0.35, "tools": 0.35, "versionControl": 0.05, "apiConcepts": 0.10, "methodologies": 0.10, "testAutomation": 0.05}
+          "categoryWeights": {"languages": 0.30, "tools": 0.30, "versionControl": 0.05, "apiConcepts": 0.10, "methodologies": 0.08, "testAutomation": 0.08, "testTypes": 0.06, "qualityProcesses": 0.03}
         },
         "MID": {
-          "categoryWeights": {"languages": 0.30, "tools": 0.35, "versionControl": 0.05, "apiConcepts": 0.10, "methodologies": 0.10, "testAutomation": 0.10}
+          "categoryWeights": {"languages": 0.25, "tools": 0.28, "versionControl": 0.05, "apiConcepts": 0.10, "methodologies": 0.08, "testAutomation": 0.12, "testTypes": 0.07, "qualityProcesses": 0.05}
         },
         "SENIOR": {
-          "categoryWeights": {"languages": 0.25, "tools": 0.30, "versionControl": 0.05, "apiConcepts": 0.10, "methodologies": 0.15, "testAutomation": 0.15}
+          "categoryWeights": {"languages": 0.20, "tools": 0.24, "versionControl": 0.05, "apiConcepts": 0.10, "methodologies": 0.12, "testAutomation": 0.14, "testTypes": 0.08, "qualityProcesses": 0.07}
         }
       }
     },
@@ -406,8 +435,8 @@
       "description": "Designs system architecture and technical solutions",
       "skillCategories": {
         "languages": ["Java", "Python", "Go"],
-        "cloud": ["AWS", "GCP", "Azure"],
-        "systemDesign": ["System Design", "Microservices", "Distributed Systems"],
+        "cloud": ["AWS", "GCP", "Azure", "Lambda", "S3", "EKS"],
+        "systemDesign": ["System Design", "Microservices", "Distributed Systems", "Event-Driven", "Serverless"],
         "cicd": ["CI/CD", "Jenkins", "GitHub Actions"],
         "networking": ["Networking", "Load Balancing"]
       },
@@ -428,8 +457,8 @@
       "title": "Database Administrator",
       "description": "Manages and optimizes databases",
       "skillCategories": {
-        "databases": ["SQL", "PostgreSQL", "MySQL", "Oracle", "MongoDB"],
-        "dbaSkills": ["Query Optimization", "Backup", "Replication"],
+        "databases": ["SQL", "PostgreSQL", "MySQL", "Oracle", "MongoDB", "SQL Server", "Redis"],
+        "dbaSkills": ["Query Optimization", "Backup", "Replication", "Indexing", "Sharding", "High Availability"],
         "infrastructure": ["Linux"],
         "tools": ["Git", "Docker"]
       },
@@ -450,11 +479,11 @@
       "title": "Site Reliability Engineer",
       "description": "Ensures system reliability and performance",
       "skillCategories": {
-        "tools": ["Docker", "Kubernetes", "Terraform", "Prometheus", "Grafana"],
+        "tools": ["Docker", "Kubernetes", "Terraform", "Prometheus", "Grafana", "Datadog", "ELK Stack", "PagerDuty"],
         "cloud": ["AWS", "GCP"],
         "scripting": ["Python", "Bash", "Go"],
         "cicd": ["CI/CD", "GitHub Actions"],
-        "observability": ["Monitoring", "Logging", "Tracing"]
+        "observability": ["Monitoring", "Logging", "Tracing", "Alerting", "Incident Response"]
       },
       "experienceLevels": {
         "ENTRY": {
@@ -473,19 +502,21 @@
       "title": "Technical Product Manager",
       "description": "Drives product strategy with technical depth",
       "skillCategories": {
-        "concepts": ["Agile", "Scrum", "Product Strategy", "User Research"],
-        "tools": ["Jira", "SQL", "Git"],
-        "languages": ["Python", "SQL"]
+        "concepts": ["Agile", "Scrum", "Product Strategy", "User Research", "Roadmapping", "Stakeholder Management", "OKRs"],
+        "tools": ["Jira", "SQL", "Git", "Confluence", "Figma", "Mixpanel"],
+        "languages": ["Python", "SQL"],
+        "metrics": ["Analytics", "A/B Testing", "Product Metrics", "North Star Metrics", "Funnel Analysis"],
+        "technicalDepth": ["API Basics", "System Design Awareness", "Technical Feasibility", "Architecture Review"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"concepts": 0.55, "tools": 0.30, "languages": 0.15}
+          "categoryWeights": {"concepts": 0.45, "tools": 0.28, "languages": 0.12, "metrics": 0.10, "technicalDepth": 0.05}
         },
         "MID": {
-          "categoryWeights": {"concepts": 0.55, "tools": 0.30, "languages": 0.15}
+          "categoryWeights": {"concepts": 0.42, "tools": 0.25, "languages": 0.10, "metrics": 0.15, "technicalDepth": 0.08}
         },
         "SENIOR": {
-          "categoryWeights": {"concepts": 0.60, "tools": 0.25, "languages": 0.15}
+          "categoryWeights": {"concepts": 0.40, "tools": 0.20, "languages": 0.08, "metrics": 0.18, "technicalDepth": 0.14}
         }
       }
     },
@@ -494,19 +525,21 @@
       "title": "Business Analyst",
       "description": "Bridges business needs and technical solutions",
       "skillCategories": {
-        "tools": ["Excel", "SQL", "Jira", "Power BI"],
+        "tools": ["Excel", "SQL", "Jira", "Power BI", "Tableau", "Confluence", "Visio"],
         "methodologies": ["Agile", "Scrum"],
-        "analysisSkills": ["Requirements", "Data Analysis"]
+        "analysisSkills": ["Requirements", "Data Analysis", "Process Modeling", "Gap Analysis"],
+        "documentation": ["Requirements Documentation", "User Stories", "Use Cases", "BRD", "Functional Specs"],
+        "stakeholderManagement": ["Stakeholder Management", "Communication", "Facilitation", "Workshops"]
       },
       "experienceLevels": {
         "ENTRY": {
-          "categoryWeights": {"tools": 0.55, "methodologies": 0.20, "analysisSkills": 0.25}
+          "categoryWeights": {"tools": 0.45, "methodologies": 0.18, "analysisSkills": 0.22, "documentation": 0.10, "stakeholderManagement": 0.05}
         },
         "MID": {
-          "categoryWeights": {"tools": 0.50, "methodologies": 0.25, "analysisSkills": 0.25}
+          "categoryWeights": {"tools": 0.40, "methodologies": 0.20, "analysisSkills": 0.22, "documentation": 0.10, "stakeholderManagement": 0.08}
         },
         "SENIOR": {
-          "categoryWeights": {"tools": 0.45, "methodologies": 0.25, "analysisSkills": 0.30}
+          "categoryWeights": {"tools": 0.35, "methodologies": 0.18, "analysisSkills": 0.22, "documentation": 0.10, "stakeholderManagement": 0.15}
         }
       }
     }
