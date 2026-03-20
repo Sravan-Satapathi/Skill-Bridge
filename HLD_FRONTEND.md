@@ -167,6 +167,5 @@ Frontend_JS/
 |---------|---------|
 | `npm run dev` | Vite dev server (port 5173) |
 | `npm run build` | Production build → `dist/` |
-| `npm run preview` | Preview production build |
 
 **Env:** `VITE_BACKEND_URL` for production API base.
