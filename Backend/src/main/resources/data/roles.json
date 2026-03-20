@@ -237,7 +237,7 @@
         "databases": ["SQL", "MongoDB", "PostgreSQL", "Redis", "MySQL"],
         "versionControl": ["Git", "GitHub", "GitLab", "GitHub Actions"],
         "apiConcepts": ["REST APIs", "RESTful APIs", "GraphQL"],
-        "dataStructuresAlgorithms": ["Data Structures", "Algorithms", "Big O Notation", "Data Structures and Algorithms"],
+        "dataStructuresAlgorithms": ["Data Structures", "Algorithms", "Data Structures and Algorithms"],
         "systemDesign": ["Microservices", "Distributed Systems", "Design Patterns", "System Design"],
         "cloud": ["Docker", "AWS", "Kubernetes"]
       },
