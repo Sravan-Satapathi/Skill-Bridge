@@ -1,0 +1,29 @@
+package com.sravan.config;
+
+import io.github.cdimascio.dotenv.Dotenv;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.env.EnvironmentPostProcessor;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.MapPropertySource;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Loads .env file from the project root (same level as pom.xml) and adds
+ * its entries to the Spring Environment so application.properties can use ${VAR}.
+ */
+public class DotenvConfig implements EnvironmentPostProcessor {
+
+    @Override
+    public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
+        Dotenv dotenv = Dotenv.configure()
+                .ignoreIfMissing()
+                .load();
+
+        Map<String, Object> map = new HashMap<>();
+        dotenv.entries().forEach(e -> map.put(e.getKey(), e.getValue()));
+
+        environment.getPropertySources().addFirst(new MapPropertySource("dotenv", map));
+    }
+}
