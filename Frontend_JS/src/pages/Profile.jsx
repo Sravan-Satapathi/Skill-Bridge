@@ -12,6 +12,15 @@ export function Profile() {
   const [extractText, setExtractText] = useState('')
   const [extractFile, setExtractFile] = useState(null)
   const [extracting, setExtracting] = useState(false)
+  const [skillsPage, setSkillsPage] = useState(1)
+
+  const SKILLS_PER_PAGE = 10
+  const skills = profile?.skills ?? []
+  const totalPages = Math.max(1, Math.ceil(skills.length / SKILLS_PER_PAGE))
+  const paginatedSkills = skills.slice(
+    (skillsPage - 1) * SKILLS_PER_PAGE,
+    skillsPage * SKILLS_PER_PAGE
+  )
 
   useEffect(() => {
     Promise.all([careerApi.getProfile(), rolesApi.getAll()])
@@ -24,6 +33,10 @@ export function Profile() {
       .catch(console.error)
       .finally(() => setLoading(false))
   }, [])
+
+  useEffect(() => {
+    if (skillsPage > totalPages && totalPages > 0) setSkillsPage(totalPages)
+  }, [skillsPage, totalPages])
 
   async function handleSave() {
     if (!profile) return
@@ -68,7 +81,12 @@ export function Profile() {
   async function handleRemoveSkill(id) {
     try {
       await careerApi.removeSkill(id)
-      if (profile) setProfile({ ...profile, skills: profile.skills.filter((s) => s.id !== id) })
+      if (profile) {
+        const nextSkills = profile.skills.filter((s) => s.id !== id)
+        const nextTotalPages = Math.max(1, Math.ceil(nextSkills.length / SKILLS_PER_PAGE))
+        if (skillsPage > nextTotalPages) setSkillsPage(nextTotalPages)
+        setProfile({ ...profile, skills: nextSkills })
+      }
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Failed to remove')
     }
@@ -161,19 +179,42 @@ export function Profile() {
       </section>
 
       <section style={section}>
-        <h2 style={h2}>Your skills ({profile?.skills?.length ?? 0})</h2>
-        {profile?.skills?.length ? (
-          <ul style={skillList}>
-            {profile.skills.map((s) => (
-              <li key={s.id} style={skillItem}>
-                <span>{s.name}</span>
-                <span style={category}>{s.category}</span>
-                <button onClick={() => handleRemoveSkill(s.id)} style={removeBtn}>
-                  Remove
+        <h2 style={h2}>Your skills ({skills.length})</h2>
+        {skills.length ? (
+          <>
+            <ul style={skillList}>
+              {paginatedSkills.map((s) => (
+                <li key={s.id} style={skillItem}>
+                  <span>{s.name}</span>
+                  <span style={category}>{s.category}</span>
+                  <button onClick={() => handleRemoveSkill(s.id)} style={removeBtn}>
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+            {totalPages > 1 && (
+              <div style={pagination}>
+                <button
+                  onClick={() => setSkillsPage((p) => Math.max(1, p - 1))}
+                  disabled={skillsPage <= 1}
+                  style={skillsPage <= 1 ? pageBtnDisabled : pageBtn}
+                >
+                  Previous
                 </button>
-              </li>
-            ))}
-          </ul>
+                <span style={pageInfo}>
+                  Page {skillsPage} of {totalPages}
+                </span>
+                <button
+                  onClick={() => setSkillsPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={skillsPage >= totalPages}
+                  style={skillsPage >= totalPages ? pageBtnDisabled : pageBtn}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <p style={{ color: '#64748b' }}>No skills yet. Extract from resume or add manually.</p>
         )}
@@ -240,7 +281,7 @@ const skillItem = {
   alignItems: 'center',
   gap: 12,
   padding: '10px 0',
-  borderBottom: '1px solid #e2e8f0',
+  borderBottom: '1px solid #64748b',
 }
 const category = { fontSize: 13, color: '#64748b' }
 const removeBtn = {
@@ -251,3 +292,25 @@ const removeBtn = {
   cursor: 'pointer',
   fontSize: 13,
 }
+const pagination = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 16,
+  marginTop: 16,
+  paddingTop: 16,
+  borderTop: '1px solid #e2e8f0',
+}
+const pageBtn = {
+  padding: '8px 16px',
+  fontSize: 14,
+  border: '1px solid #e2e8f0',
+  borderRadius: 8,
+  background: '#fff',
+  cursor: 'pointer',
+}
+const pageBtnDisabled = {
+  ...pageBtn,
+  opacity: 0.5,
+  cursor: 'not-allowed',
+}
+const pageInfo = { fontSize: 14, color: '#64748b' }
