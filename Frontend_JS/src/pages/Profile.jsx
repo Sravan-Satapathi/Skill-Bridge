@@ -11,6 +11,7 @@ export function Profile() {
   const [experienceLevel, setExperienceLevel] = useState('')
   const [extractText, setExtractText] = useState('')
   const [extractFile, setExtractFile] = useState(null)
+  const [extractMergeStrategy, setExtractMergeStrategy] = useState('REPLACE')
   const [extracting, setExtracting] = useState(false)
   const [skillsPage, setSkillsPage] = useState(1)
 
@@ -63,10 +64,10 @@ export function Profile() {
     setExtracting(true)
     try {
       if (hasFile) {
-        await careerApi.extractSkillsFromFile(extractFile, 'REPLACE')
+        await careerApi.extractSkillsFromFile(extractFile, extractMergeStrategy)
         setExtractFile(null)
       } else {
-        await careerApi.extractSkills(extractText, 'REPLACE')
+        await careerApi.extractSkills(extractText, extractMergeStrategy)
         setExtractText('')
       }
       const p = await careerApi.getProfile()
@@ -168,6 +169,17 @@ export function Profile() {
               </button>
             </span>
           )}
+        </div>
+        <div style={{ marginBottom: 12 }}>
+          <label style={{ fontSize: 14, color: '#475569', marginRight: 8 }}>Merge strategy:</label>
+          <select
+            value={extractMergeStrategy}
+            onChange={(e) => setExtractMergeStrategy(e.target.value)}
+            style={select}
+          >
+            <option value="REPLACE">Replace — clear existing skills</option>
+            <option value="MERGE">Merge — add to existing skills</option>
+          </select>
         </div>
         <button
           onClick={handleExtract}
