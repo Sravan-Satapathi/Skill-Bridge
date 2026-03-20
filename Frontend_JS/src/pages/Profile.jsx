@@ -13,6 +13,7 @@ export function Profile() {
   const [extractFile, setExtractFile] = useState(null)
   const [extractMergeStrategy, setExtractMergeStrategy] = useState('REPLACE')
   const [extracting, setExtracting] = useState(false)
+  const [extractResult, setExtractResult] = useState(null)
   const [skillsPage, setSkillsPage] = useState(1)
 
   const SKILLS_PER_PAGE = 10
@@ -62,16 +63,19 @@ export function Profile() {
     if (!hasText && !hasFile) return
 
     setExtracting(true)
+    setExtractResult(null)
     try {
+      let res
       if (hasFile) {
-        await careerApi.extractSkillsFromFile(extractFile, extractMergeStrategy)
+        res = await careerApi.extractSkillsFromFile(extractFile, extractMergeStrategy)
         setExtractFile(null)
       } else {
-        await careerApi.extractSkills(extractText, extractMergeStrategy)
+        res = await careerApi.extractSkills(extractText, extractMergeStrategy)
         setExtractText('')
       }
       const p = await careerApi.getProfile()
       setProfile(p)
+      if (res?.skillsAdded > 0) setExtractResult(res)
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Extraction failed')
     } finally {
@@ -188,6 +192,12 @@ export function Profile() {
         >
           {extracting ? 'Extracting...' : 'Extract & save skills'}
         </button>
+        {extractResult && (
+          <p style={{ marginTop: 12, fontSize: 14, color: '#059669' }}>
+            Added {extractResult.skillsAdded} skill{extractResult.skillsAdded !== 1 ? 's' : ''}{' '}
+            ({extractResult.source === 'AI' ? 'AI extraction' : 'Keyword matching'})
+          </p>
+        )}
       </section>
 
       <section style={section}>

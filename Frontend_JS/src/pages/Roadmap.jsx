@@ -61,7 +61,7 @@ export function Roadmap() {
 
           {Object.entries(byCategory).map(([category, skills]) => (
             <div key={category} style={section}>
-              <h3 style={h3}>{category} {skills[0]?.pickOneOf && '(pick one)'}</h3>
+              <h3 style={h3}>{category}</h3>
               <ul style={skillList}>
                 {skills.map((s, i) => (
                   <li key={`${s.skillName}-${i}`} style={skillItem}>
