@@ -12,6 +12,8 @@ Career navigation platform that uses resume/GitHub-like input to provide a perso
 
 **Estimated Time Spent:** 7 hours
 
+**Demo Video:** https://drive.google.com/file/d/1nU7VVtfrJwYsPQ1K8Nkoq6Xp9nVN0OrX/view?usp=sharing
+
 ---
 
 ## Quick Start
