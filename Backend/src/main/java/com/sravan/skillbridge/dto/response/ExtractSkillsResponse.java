@@ -14,7 +14,7 @@ import java.util.List;
 public class ExtractSkillsResponse {
 
     private List<SkillResponse> extractedSkills;
-    private String source; // AI, FALLBACK, NONE
+    private String source;
     private boolean appliedToProfile;
     private int skillsAdded;
 }

@@ -17,7 +17,6 @@ public class GapAnalysisService {
     private final ProfileService profileService;
     private final RoleService roleService;
 
-    /** Composite skills: when user has these, also count as having the sub-skills for matching. */
     private static final Map<String, List<String>> SKILL_EXPANSIONS = Map.ofEntries(
             Map.entry("aws ec2", List.of("aws", "ec2")),
             Map.entry("aws rds", List.of("aws", "rds")),

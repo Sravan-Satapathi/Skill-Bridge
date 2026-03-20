@@ -9,10 +9,6 @@ import org.springframework.core.env.MapPropertySource;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Loads .env file from the project root (same level as pom.xml) and adds
- * its entries to the Spring Environment so application.properties can use ${VAR}.
- */
 public class DotenvConfig implements EnvironmentPostProcessor {
 
     @Override

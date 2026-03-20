@@ -186,7 +186,6 @@ public class SkillExtractionService {
         List<SkillRequest> result = new ArrayList<>();
         List<int[]> matchedSpans = new ArrayList<>();
 
-        // Sort by length descending so "Spring Boot" matches before "Spring"
         List<String> sortedSkills = new ArrayList<>(knownSkills);
         sortedSkills.sort((a, b) -> Integer.compare(b.length(), a.length()));
 
@@ -224,7 +223,6 @@ public class SkillExtractionService {
         if (raw == null || raw.isBlank()) return "Other";
         if (validCategories.contains(raw)) return raw;
         String lower = raw.toLowerCase();
-        // Case-insensitive match: find canonical form from validCategories
         for (String valid : validCategories) {
             if (valid.equalsIgnoreCase(raw)) return valid;
         }

@@ -37,7 +37,7 @@ public class RoadmapResponse {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class SuggestedResource {
-        private String type; // course, project, certification
+        private String type;
         private String name;
         private String source;
         private Integer estimatedHours;

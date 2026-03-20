@@ -13,8 +13,6 @@ public class Role {
     private String id;
     private String title;
     private String description;
-    /** Category name -> list of skills. Used when experienceLevels not present (backward compat). */
     private Map<String, List<String>> skillCategories;
-    /** Experience level -> config with required/preferred skills and category weights. */
     private Map<String, ExperienceLevelConfig> experienceLevels;
 }

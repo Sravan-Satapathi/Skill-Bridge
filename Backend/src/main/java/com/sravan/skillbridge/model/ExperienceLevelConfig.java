@@ -12,6 +12,5 @@ public class ExperienceLevelConfig {
 
     private List<String> requiredSkills;
     private List<String> preferredSkills;
-    /** Category name -> weight (0.0 to 1.0). Higher = more important for this level. */
     private Map<String, Double> categoryWeights;
 }

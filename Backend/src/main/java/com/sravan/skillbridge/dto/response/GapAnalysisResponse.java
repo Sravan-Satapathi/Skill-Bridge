@@ -20,7 +20,6 @@ public class GapAnalysisResponse {
     private int matchScore;
     private List<String> matchedCategories;
     private List<String> missingCategories;
-    /** For each missing category: all skills with "learn at least one of" framing. */
     private List<MissingCategoryGap> missingCategoryGaps;
     private String summary;
 
